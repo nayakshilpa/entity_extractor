@@ -64,7 +64,10 @@ if option == "Free Text":
             st.warning("Please enter a cargo description text.")
         else:
             try:
-                entities = extract_entities(user_text)
+                with st.spinner("Extracting entities... please wait."):
+                    entities = extract_entities(user_text)
+
+                st.success("Extraction complete!")
                 st.subheader("Extracted Entities")
                 for k, v in entities.items():
                     st.write(f"**{k}:** {v}")
