@@ -1,4 +1,8 @@
+
 streamlit
 pandas
 xlsxwriter
 openpyxl
+openai
+langchain
+langchain-community
