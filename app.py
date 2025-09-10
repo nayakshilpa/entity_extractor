@@ -1,6 +1,9 @@
 import streamlit as st
 from llm_model_mapper.llm_mapper import LLMMapper
 import os
+from dotenv import load_dotenv
+load_dotenv()
+
 st.title("Cargo Description Entity Extractor")
 
 
