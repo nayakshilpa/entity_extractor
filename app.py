@@ -67,7 +67,7 @@ if option == "Free Text":
 
 # --- Bulk Upload Mode ---
 elif option == "Bulk Upload":
-    st.subheader("Upload an Excel file with cargo descriptions")
+    st.subheader("Upload an Excel file with a column 'Cargo Description' containing the texts.")
     uploaded_file = st.file_uploader("Upload Excel", type=["xlsx"])
 
     if uploaded_file is not None:
