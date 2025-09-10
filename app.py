@@ -3,6 +3,12 @@ import pandas as pd
 import ast
 from llm_model_mapper.llm_mapper import LLMMapper
 
+st.set_page_config(
+    page_title="AI Cargo Parser",
+    page_icon="icon.png",
+    layout="wide"
+)
+
 st.title("Cargo Description Entity Extractor")
 
 # Load secrets
