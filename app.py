@@ -1,17 +1,12 @@
 import streamlit as st
 from llm_model_mapper.llm_mapper import LLMMapper
-import os
-from dotenv import load_dotenv
-load_dotenv()
 
 st.title("Cargo Description Entity Extractor")
 
-
-# Hardcoded LLM configuration
-azure_endpoint = os.environ.get("AZURE_ENDPOINT")
-azure_api_version = os.environ.get("AZURE_API_VERSION")
-azure_api_key = os.environ.get("AZURE_API_KEY")
-model_name = os.environ.get("MODEL_NAME")
+azure_endpoint = st.secrets["AZURE_ENDPOINT"]
+azure_api_version = st.secrets["AZURE_API_VERSION"]
+azure_api_key = st.secrets["AZURE_API_KEY"]
+model_name = st.secrets["MODEL_NAME"]
 
 # Main input area
 st.subheader("Enter Cargo Description Text")
